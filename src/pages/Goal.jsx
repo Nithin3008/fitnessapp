@@ -40,40 +40,51 @@ const Goal = () => {
         >
           <label>Enter goal name</label>
           <input
-            className="border-2 border-black"
+            className="border-2 border-gray-400"
             required
             id="name"
             type="text"
           ></input>
           <label>Enter goal desc</label>
           <input
-            className="border-2 border-black"
+            className="border-2 border-gray-400"
             required
             id="description"
             type="text"
           ></input>
           <label>Enter target date</label>
           <input
-            className="border-2 border-black"
+            className="border-2 border-gray-400"
             required
             id="date"
             type="date"
           ></input>
           <label>Enter target calories</label>
           <input
-            className="border-2 border-black"
+            className="border-2 border-gray-400"
             required
             id="calories"
             type="number"
           ></input>
           <label>Enter status</label>
           <input
-            className="border-2 border-black"
+            className="border-2 border-gray-400"
             required
             id="status"
             type="text"
           ></input>
-          <button type="submit">Submit</button>
+          <button
+            className="border-2 p-2 bg-blue-500 border-blue-500 rounded-md"
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            className="border-2 p-2 bg-red-500 border-red-500 rounded-md"
+            onClick={() => setDisplay(!displayForm)}
+          >
+            Cancel
+          </button>
         </form>
       </div>
       <div>

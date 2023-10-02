@@ -51,20 +51,36 @@ const Exercise = () => {
           }}
         >
           <label>Select Your Exercise</label>
-          <select required onChange={(e) => setType(e.target.value)}>
+          <select
+            className="border-2 border-gray-400"
+            required
+            onChange={(e) => setType(e.target.value)}
+          >
             {exerciseKeys.map((val) => (
               <option>{val}</option>
             ))}
           </select>
           <lable>Duration in min</lable>
           <input
+            className="border-2 border-gray-400"
             id="time"
             required
             type="number"
             onChange={(e) => caloriesCal(e)}
           ></input>
           <label>Calories Burned:{caloriesBurned}</label>
-          <button type="submit">Submit</button>
+          <button
+            className="border-2 p-2 bg-blue-500 border-blue-500 rounded-md"
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            className="border-2 p-2 bg-red-500 border-red-500 rounded-md"
+            onClick={() => setDisplay(!displayForm)}
+          >
+            Cancel
+          </button>
         </form>
       </div>
       <ul>

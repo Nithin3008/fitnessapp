@@ -25,24 +25,66 @@ const Food = () => {
   console.log(foodData);
   return (
     <>
-      <div className={displayForm ? "block" : "hidden"}>
+      <div
+        style={{
+          display: displayForm ? "block" : "none",
+        }}
+        className="fixed hidden inset-0 overflow-auto bg-black bg-opacity-40 z-50"
+      >
         <form
           onSubmit={(e) => {
             getFoodForm(e);
             e.target.reset();
           }}
+          className="p-6 flex flex-col text-xl rounded-lg bg-white w-fit mt-36 mx-auto space-y-2 space-x-2 "
         >
           <label>Enter Food name</label>
-          <input required id="name" type="text"></input>
+          <input
+            className="border-2 border-gray-400"
+            required
+            id="name"
+            type="text"
+          ></input>
           <label>Enter Fat Number</label>
-          <input required id="fat" type="number"></input>
+          <input
+            className="border-2 border-gray-400"
+            required
+            id="fat"
+            type="number"
+          ></input>
           <label>Enter Carbohydrates</label>
-          <input required id="carbohydrates" type="number"></input>
+          <input
+            className="border-2 border-gray-400"
+            required
+            id="carbohydrates"
+            type="number"
+          ></input>
           <label>Enter calories</label>
-          <input required id="calories" type="number"></input>
+          <input
+            className="border-2 border-gray-400"
+            required
+            id="calories"
+            type="number"
+          ></input>
           <label>Enter Protein</label>
-          <input required id="protein" type="number"></input>
-          <button type="submit">Submit</button>
+          <input
+            className="border-2 border-gray-400"
+            required
+            id="protein"
+            type="number"
+          ></input>
+          <button
+            className="border-2 p-2 bg-blue-500 border-blue-500 rounded-md"
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            className="border-2 p-2 bg-red-500 border-red-500 rounded-md"
+            onClick={() => setDisplay(!displayForm)}
+          >
+            Cancel
+          </button>
         </form>
       </div>
       <div>
