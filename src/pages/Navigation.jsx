@@ -8,20 +8,22 @@ const Navigation = () => {
     padding: "6px",
   });
   return (
-    <div className="flex flex-col w-72 items-center justify-center gap-5">
-      <NavLink style={setActiveStyle} to="/">
-        Home
-      </NavLink>
-      <NavLink style={setActiveStyle} to="/Exercise">
-        Exercise
-      </NavLink>
-      <NavLink style={setActiveStyle} to="/Goal">
-        Goals
-      </NavLink>
-      <NavLink style={setActiveStyle} to="/Food">
-        Food
-      </NavLink>
-    </div>
+    <>
+      <div className="flex flex-col w-72 items-center justify-center gap-5 bg-orange-200">
+        <NavLink style={setActiveStyle} to="/">
+          Home
+        </NavLink>
+        <NavLink style={setActiveStyle} to="/Exercise">
+          Exercise
+        </NavLink>
+        <NavLink style={setActiveStyle} to="/Goal">
+          Goals
+        </NavLink>
+        <NavLink style={setActiveStyle} to="/Food">
+          Food
+        </NavLink>
+      </div>
+    </>
   );
 };
 
