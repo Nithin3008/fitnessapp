@@ -16,6 +16,7 @@ const Goal = () => {
       Status: event.target.status.value,
     };
     console.log(event);
+    setDisplay(!displayForm);
     dispatcher(setGoals(data));
   }
   useEffect(() => {
@@ -24,23 +25,54 @@ const Goal = () => {
   console.log(goalData);
   return (
     <>
-      <div className={displayForm ? "block" : "hidden"}>
+      <div
+        style={{
+          display: displayForm ? "block" : "none",
+        }}
+        className="fixed hidden inset-0 overflow-auto bg-black bg-opacity-40 z-50"
+      >
         <form
+          className="p-6 flex flex-col text-xl rounded-lg bg-white w-fit mt-36 mx-auto space-y-2 space-x-2 "
           onSubmit={(e) => {
             getData(e);
             e.target.reset();
           }}
         >
           <label>Enter goal name</label>
-          <input required id="name" type="text"></input>
+          <input
+            className="border-2 border-black"
+            required
+            id="name"
+            type="text"
+          ></input>
           <label>Enter goal desc</label>
-          <input required id="description" type="text"></input>
+          <input
+            className="border-2 border-black"
+            required
+            id="description"
+            type="text"
+          ></input>
           <label>Enter target date</label>
-          <input required id="date" type="date"></input>
+          <input
+            className="border-2 border-black"
+            required
+            id="date"
+            type="date"
+          ></input>
           <label>Enter target calories</label>
-          <input required id="calories" type="number"></input>
+          <input
+            className="border-2 border-black"
+            required
+            id="calories"
+            type="number"
+          ></input>
           <label>Enter status</label>
-          <input required id="status" type="text"></input>
+          <input
+            className="border-2 border-black"
+            required
+            id="status"
+            type="text"
+          ></input>
           <button type="submit">Submit</button>
         </form>
       </div>
