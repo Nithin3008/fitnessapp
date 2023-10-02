@@ -22,6 +22,12 @@ const Navigation = () => {
         <NavLink style={setActiveStyle} to="/Food">
           Food
         </NavLink>
+        <a
+          href="https://github.com/Nithin3008/fitnessapp"
+          className="text-xl text-blue-500 font-bold"
+        >
+          Github Link
+        </a>
       </div>
     </>
   );
