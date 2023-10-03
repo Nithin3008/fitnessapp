@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./Navigation";
 import { Outlet } from "react-router";
-import Footer from "./Footer";
+
 const AppLayout = () => {
   return (
     <>
@@ -13,7 +13,6 @@ const AppLayout = () => {
           <Outlet></Outlet>
         </div>
       </div>
-      {/* <Footer></Footer> */}
     </>
   );
 };

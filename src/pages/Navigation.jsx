@@ -28,6 +28,12 @@ const Navigation = () => {
         >
           Github Link
         </a>
+        <a
+          href="https://replit.com/@nithinrocky30/assignment17"
+          className="text-xl text-blue-500 font-bold"
+        >
+          Repl Link
+        </a>
       </div>
     </>
   );
