@@ -1,6 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-
+import { getGoals } from "../Redux/GoalReducer";
+import { getExercise } from "../Redux/ExerciseReducer";
+import { getFood } from "../Redux/FoodReducer";
 import DashboardUi from "../components/DashboardUi";
+import { useEffect } from "react";
 
 const Welcome = () => {
   const dispatcher = useDispatch();
@@ -21,6 +24,11 @@ const Welcome = () => {
   );
   const extraCalories1 = TargetCalories - caloriesConsumed - burnedCalories;
   const extraCalories = extraCalories1 > 0 ? extraCalories1 : 0;
+  useEffect(() => {
+    dispatcher(getGoals());
+    dispatcher(getFood());
+    dispatcher(getExercise());
+  }, []);
   return (
     <>
       <h1 className="text-4xl p-2 mt-8 text-orange-600">
